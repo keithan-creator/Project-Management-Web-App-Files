@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Project</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="dashboard">
+            <h2>Dashboard</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="project-app.html">Project Plans</a></li>
+                <li><a href="#">Expense Tracking</a></li>
+                <li><a href="#">Contracts</a></li>
+                <li><a href="#">Invoices</a></li>
+                <li><a href="#">Construction Documents</a></li>
+                <li><a href="#">Materials</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h1>Create New Project</h1>
+            <form id="createProjectForm">
+                <input type="text" id="newProjectName" placeholder="Project Name" required>
+                <button type="submit">Create Project</button>
+            </form>
+            <div id="taskSection" style="display: none;">
+                <h2 id="projectName">New Project</h2>
+                <form id="taskForm">
+                    <input type="text" id="taskName" placeholder="Task Name" required>
+                    <input type="text" id="workDivision" placeholder="Work Division" required>
+                    <input type="date" id="startDate" required>
+                    <input type="number" id="duration" placeholder="Duration (days)" required>
+                    <input type="number" id="percentComplete" placeholder="% Complete" min="0" max="100" required>
+                    <input type="text" id="accountable" placeholder="Accountable" required>
+                    <select id="dependency" multiple>
+                        <option value="">No Dependency</option>
+                    </select>
+                    <button type="submit">Add Task</button>
+                </form>
+                <div class="task-table-container">
+                    <table id="taskTable">
+                        <thead>
+                            <tr>
+                                <th>Task #</th>
+                                <th>Work Division</th>
+                                <th>Start Date</th>
+                                <th>Duration</th>
+                                <th>Projected Complete Date</th>
+                                <th>% Complete</th>
+                                <th>Accountable</th>
+                                <th>Dependencies</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="taskList"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

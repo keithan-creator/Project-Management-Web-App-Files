@@ -1,0 +1,253 @@
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+    font-family: Helvetica, Arial, sans-serif;
+
+}
+
+body {
+
+    font-size: 16px;
+
+}
+
+.container {
+
+    display: flex;
+
+    min-height: 100vh;
+
+}
+
+.dashboard {
+
+    width: 250px;
+
+    background-color: #4a90e2; /* Soft blue, pending confirmation */
+
+    padding: 20px;
+
+    border-right: 1px solid #ccc;
+
+}
+
+.dashboard h2 {
+
+    margin-bottom: 20px;
+
+    color: white;
+
+}
+
+.dashboard ul {
+
+    list-style: none;
+
+}
+
+.dashboard ul li {
+
+    margin: 10px 0;
+
+}
+
+.dashboard ul li a {
+
+    text-decoration: none;
+
+    color: white;
+
+    font-size: 16px;
+
+}
+
+.project-plans {
+
+    position: relative;
+
+}
+
+.project-list {
+
+    margin-left: 20px;
+
+    font-size: 14px;
+
+    display: none;
+
+}
+
+.project-list.show {
+
+    display: block;
+
+}
+
+.project-list li {
+
+    margin: 5px 0;
+
+}
+
+.main-content {
+
+    flex-grow: 1;
+
+    padding: 20px;
+
+}
+
+.main-content h1 {
+
+    margin-bottom: 20px;
+
+}
+
+#taskForm, #createProjectForm {
+
+    margin-bottom: 20px;
+
+}
+
+#taskForm input, #createProjectForm input {
+
+    padding: 8px;
+
+    margin-right: 10px;
+
+    margin-bottom: 10px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 4px;
+
+}
+
+#taskForm select {
+
+    padding: 8px;
+
+    margin-right: 10px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 4px;
+
+}
+
+#taskForm button, #createProjectForm button {
+
+    padding: 8px 16px;
+
+    background-color: #007bff;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 4px;
+
+    cursor: pointer;
+
+}
+
+#taskForm button:hover, #createProjectForm button:hover {
+
+    background-color: #0056b3;
+
+}
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin-top: 20px;
+
+    position: relative;
+
+}
+
+th, td {
+
+    border: 1px solid #ccc;
+
+    padding: 10px;
+
+    text-align: left;
+
+}
+
+th {
+
+    background-color: #f4f4f4;
+
+}
+
+tr.dragging {
+
+    opacity: 0.5;
+
+}
+
+tr.invalid-drop {
+
+    background-color: #ffcccc;
+
+}
+
+tr.subtask {
+
+    background-color: #f9f9f9; /* Light background for subtasks */
+
+    padding-left: 20px;
+
+}
+
+tr.subtask td:first-child::before {
+
+    content: '↳ '; /* Right arrow for subtask indentation */
+
+}
+
+/* Triangle control for adding subtasks */
+
+tr.task-row {
+
+    position: relative;
+
+}
+
+tr.task-row:hover::before {
+
+    content: '';
+
+    position: absolute;
+
+    left: -15px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 0;
+
+    height: 0;
+
+    border-left: 8px solid transparent;
+
+    border-right: 8px solid transparent;
+
+    border-bottom: 8px solid #007bff;
+
+    cursor: pointer;
+
+    z-index: 10;
+
+}

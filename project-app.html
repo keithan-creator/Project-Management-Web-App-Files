@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Tasks</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="dashboard">
+            <h2>Dashboard</h2>
+            <ul id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#" id="project-plans">Project Plans</a>
+                    <ul class="submenu" id="project-list">
+                        <!-- Projects populated via JS -->
+                    </ul>
+                </li>
+                <!-- Other menu items... -->
+            </ul>
+        </nav>
+        <main class="main-content">
+            <h1 id="project-title">Project Tasks</h1>
+            <button id="add-task">Add Task</button>
+            <table id="task-table">
+                <thead>
+                    <tr>
+                        <th>Task #</th>
+                        <th>Work Division</th>
+                        <th>Start Date</th>
+                        <th>Duration</th>
+                        <th>Projected Complete Date</th>
+                        <th>% Complete</th>
+                        <th>Accountable</th>
+                        <th>Dependencies</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="task-body">
+                    <!-- Tasks populated via JS -->
+                </tbody>
+            </table>
+            <div id="task-form" style="display: none;">
+                <!-- Form fields for task input -->
+                <input type="text" id="work-division" placeholder="Work Division">
+                <input type="date" id="start-date">
+                <input type="number" id="duration" placeholder="Duration (days)">
+                <input type="number" id="percent-complete" placeholder="% Complete" min="0" max="100">
+                <input type="text" id="accountable" placeholder="Accountable">
+                <input type="text" id="dependencies" placeholder="Dependencies (task #s, comma-separated)">
+                <button id="save-task">Save Task</button>
+                <button id="cancel-task">Cancel</button>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project View</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="dashboard-pane">
+            <h2 id="project-title">Project</h2>
+            <ul id="modules">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html" class="active">Project Plans</a></li>
+                <li><a href="expenses.html">Expense Tracking</a></li>
+                <li><a href="contracts.html">Contracts</a></li>
+                <li><a href="invoices.html">Invoices</a></li>
+                <li><a href="construction-docs.html">Construction Documents</a></li>
+                <li><a href="materials.html">Materials</a></li>
+            </ul>
+        </nav>
+        <main class="main-content">
+            <h1 id="view-title">Project Tasks</h1>
+            <form id="add-task-form">
+                <input type="text" id="work-division" placeholder="Work Division" required>
+                <input type="date" id="start-date" required>
+                <input type="number" id="duration" placeholder="Duration (days)" required>
+                <input type="number" id="percent-complete" placeholder="% Complete" min="0" max="100" value="0">
+                <input type="text" id="accountable" placeholder="Accountable" required>
+                <button type="submit">Add Task</button>
+            </form>
+            <table id="task-table">
+                <thead>
+                    <tr>
+                        <th>Task #</th>
+                        <th>Work Division</th>
+                        <th>Start Date</th>
+                        <th>Duration</th>
+                        <th>Projected Complete Date</th>
+                        <th>% Complete</th>
+                        <th>Accountable</th>
+                        <th>Dependencies</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="task-tbody"></tbody>
+            </table>
+        </main>
+    </div>
+    <script src="project-view.js"></script>
+</body>
+</html>
